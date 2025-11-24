@@ -6,7 +6,7 @@
 
 ### Dashboard File
 
-The final dashboard is [Data_Jobs_Salary_Dashboard.xlsx](https://www.example.com)
+The final dashboard is [Data_Jobs_Salary_Dashboard.xlsx](https://github.com/beverly-m/Data-Analytics-Projects/blob/801aa4eb9dc25eeacad28fc974ed44ad4260f0f6/1_Salary_Dashboard/Data_Jobs_Salary_Dashboard.xlsx)
 
 ### Problem
 
