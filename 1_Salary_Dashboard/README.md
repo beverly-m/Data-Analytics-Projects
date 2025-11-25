@@ -36,27 +36,34 @@ I used the following Excel skills to build the dashboard
 
 ### Filtering by job title, country and schedule
 
-> #### Key Insights & Recommendations
-
 #### ✅ Data Validation: Filtered Lists
 
-_Justification_
+Filtered dropdown lists used to select the desired `job title`, `job country` and `job type`
+
+- prevent input errors by restricting values that can be entered to validated inputs
+- improve dashboard usability by providing a quick and simplified selection process
 
 _Screen recording of lists_
 
-### Median Salaries of Data Jobs by Job Title
+### Median Salaries of Data Jobs
 
 > #### Key Insights & Recommendations
 
-#### 📈 Bar Chart
+#### 📈 Horizontal Bar Charts - Job Title & Job Type
 
-_Justification_
+Horizontal bar charts provide a visual comparison of median salaries across the different job titles and job types. The data is sorted in ascending order and has formatted salary values to improve readability. The selected job title or job type is higlighted with a darker color for easier identification.
 
 _Bar chart image_
 
-#### 🔢 Formula
+#### 📈 Map Chart - Job Country
 
-_Justification_
+I used a map chart to plot median salaries globally, with a color-coded design choice that visually differentiates salary levels across regions. This data representation helps users understand geographic salary trends and easily spot high and low paying regions.
+
+_Map chart image_
+
+#### 🔢 Formulas
+
+Median Salary
 
 ```Excel formula syntax
 MEDIAN(
@@ -73,12 +80,6 @@ MEDIAN(
 ### Median Salaries of Data Jobs by Location
 
 > #### Key Insights & Recommendations
-
-#### 📈 Map Chart
-
-_Justification_
-
-_Map chart image_
 
 #### 🔢 Formula
 
