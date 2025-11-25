@@ -20,7 +20,7 @@ The final dashboard is [Data_Jobs_Salary_Dashboard.xlsx](https://github.com/beve
 
 ### Dataset
 
-The dataset contains real-world data job information from 2023. The dataset is available via an [Excel for Data Analytics course by Luke Barousse](https://youtu.be/pCJ15nGFgVg?si=qicwLVMJyS4ycjqH).
+The dataset contains 30,000+ real-world data job postings from 2023. The dataset is available via an [Excel for Data Analytics course by Luke Barousse](https://youtu.be/pCJ15nGFgVg?si=qicwLVMJyS4ycjqH).
 
 It includes detailed information on job titles, salaries, locations, skills and posting platforms.
 
@@ -36,24 +36,36 @@ I used the following Excel skills to build the dashboard
 
 ### Filtering by job title, country and schedule
 
-#### ✅ Data Validation: Filtered Lists
+#### ✅ Data Validation - Filtered Lists
 
 Filtered dropdown lists used to select the desired `job title`, `job country` and `job type`
 
-- prevent input errors by restricting values that can be entered to validated inputs
-- improve dashboard usability by providing a quick and simplified selection process
+- **prevent input errors** by restricting values that can be entered to validated inputs
+- **improve dashboard usability** by providing a quick and simplified selection process
 
 _Screen recording of lists_
 
 ### Median Salaries of Data Jobs
 
-> #### Key Insights & Recommendations
-
 #### 📈 Horizontal Bar Charts - Job Title & Job Type
 
 Horizontal bar charts provide a visual comparison of median salaries across the different job titles and job types. The data is sorted in ascending order and has formatted salary values to improve readability. The selected job title or job type is higlighted with a darker color for easier identification.
 
-_Bar chart image_
+_Job title Bar chart image_
+
+> 👆🏽 **User Input** - `job_title`: Data Analyst; `job_country`: United States; `job_schedule_type`: Full-Time
+>
+> 💡**Insights** - Data professionals with senior roles have a higher median salary than normal roles. Engineers and scientists earn more than analysts.
+>
+> 🤔 **Recommendations** - Job seekers aiming to maximize earning potential should prioritize advancing into senior roles and consider career paths in engineering or data science rather than analyst positions. Building specialized technical expertise and leadership skills can accelerate progression into these higher‑paying categories. Employers, meanwhile, should recognize the salary gap and ensure competitive compensation for analysts to retain talent and maintain balanced teams.
+
+_Job type Bar chart image_
+
+> 👆🏽 **User Input** - `job_title`: Data Analyst; `job_country`: United States; `job_schedule_type`: Full-Time
+>
+> 💡**Insights** - Data professionals with senior roles have a higher median salary than normal roles. Engineers and scientists earn more than analysts.
+>
+> 🤔 **Recommendations** - Job seekers aiming to maximize earning potential should prioritize advancing into senior roles and consider career paths in engineering or data science rather than analyst positions. Building specialized technical expertise and leadership skills can accelerate progression into these higher‑paying categories. Employers, meanwhile, should recognize the salary gap and ensure competitive compensation for analysts to retain talent and maintain balanced teams.
 
 #### 📈 Map Chart - Job Country
 
@@ -61,9 +73,7 @@ I used a map chart to plot median salaries globally, with a color-coded design c
 
 _Map chart image_
 
-#### 🔢 Formulas
-
-Median Salary
+#### 🔢 Formula - Median Salary by Job Title, Country & Schedule Type
 
 ```Excel formula syntax
 MEDIAN(
@@ -77,70 +87,13 @@ MEDIAN(
   )
 ```
 
-### Median Salaries of Data Jobs by Location
-
-> #### Key Insights & Recommendations
-
-#### 🔢 Formula
-
-_Justification_
-
-```Excel formula syntax
-MEDIAN(
-  IF(
-     (jobs[job_country]=A2) *
-     (jobs[salary_year_avg]<>0) *
-     (jobs[job_title_short]=job_title) *
-     (ISNUMBER(SEARCH(job_type,jobs[job_schedule_type]))),
-     jobs[salary_year_avg]
-    )
- )
-```
-
-### Median Salaries of Data Jobs by Schedule
-
-> #### Key Insights & Recommendations
-
-#### 📈 Bar Chart
-
-_Justification_
-
-_Bar chart image_
-
-#### 🔢 Formula
-
-_Justification_
-
-```Excel formula syntax
-MEDIAN(
-  IF(
-     (jobs[job_country]=job_country) *
-     (jobs[salary_year_avg]<>0) *
-     (jobs[job_title_short]=job_title) *
-     (ISNUMBER(SEARCH(A2,jobs[job_schedule_type]))),
-     jobs[salary_year_avg]
-    )
- )
-```
+This formula calculates the median salary for a specific `job_title`, `job_country`, and `job_schedule_type` while excluding missing or invalid salary values. Using the median ensures that extreme outliers don’t distort the results, giving job seekers a realistic benchmark for compensation.
 
 ### Top Platforms & Posting Volume
 
 > #### Key Insights & Recommendations
 
-#### 🔢 Formula: Top Job Platform
-
-_Justification_
-
-```Excel formula syntax
-COUNTIFS(jobs[job_via], A2,
-         jobs[job_title_short], job_title,
-         jobs[job_country], job_country,
-         jobs[job_schedule_type], job_type)
-```
-
-#### 🔢 Formula: Job Count
-
-_Justification_
+#### 🔢 Formula: Job Count by Job Title, Country & Schedule Type
 
 ```Excel formula syntax
 COUNT(
@@ -152,5 +105,18 @@ COUNT(
     )
  )
 ```
+
+This formula counts the number of jobs that meet the specified criteria `job_title`, `job_country`, and `job_schedule_type`, which helps job seekers understand data jobs that are in demand.
+
+#### 🔢 Formula: Top Job Platform
+
+```Excel formula syntax
+COUNTIFS(jobs[job_via], A2,
+         jobs[job_title_short], job_title,
+         jobs[job_country], job_country,
+         jobs[job_schedule_type], job_type)
+```
+
+This formula counts the number of job postings from a specific platform `job_via` based on the `job_title`, `job_country`, and `job_schedule_type` selected by the user. This helps job seekers identify which platforms are most effective for finding desired job roles.
 
 ## Conclusion
