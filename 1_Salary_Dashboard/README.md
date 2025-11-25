@@ -12,7 +12,7 @@ To address this challenge, I developed a job salary dashboard to visualize salar
 
 ### Objective
 
-To investigate salary trends of data jobs considering their location and schedule (e.g. full-time, part-time or internship).
+To investigate salary trends of data jobs considering the job location and schedule (e.g. full-time or part-time).
 
 ### Dashboard File
 
@@ -36,15 +36,27 @@ I used the following Excel skills to build the dashboard
 
 ### Filtering by job title, country and schedule
 
+> #### Key Insights & Recommendations
+
 #### ✅ Data Validation: Filtered Lists
 
 _Justification_
 
 _Screen recording of lists_
 
-### Calculating & Visualising Median Salary Trends
+### Median Salaries of Data Jobs by Job Title
 
-#### 🔢 Median Salary by Job Title
+> #### Key Insights & Recommendations
+
+#### 📈 Bar Chart
+
+_Justification_
+
+_Bar chart image_
+
+#### 🔢 Formula
+
+_Justification_
 
 ```Excel formula syntax
 MEDIAN(
@@ -58,15 +70,19 @@ MEDIAN(
   )
 ```
 
+### Median Salaries of Data Jobs by Location
+
+> #### Key Insights & Recommendations
+
+#### 📈 Map Chart
+
 _Justification_
 
-#### 📈 Bar Chart - Median Salaries of Data Jobs
+_Map chart image_
+
+#### 🔢 Formula
 
 _Justification_
-
-_Bar chart image_
-
-#### 🔢 Median Salary by Country
 
 ```Excel formula syntax
 MEDIAN(
@@ -80,26 +96,19 @@ MEDIAN(
  )
 ```
 
-_Justification_
+### Median Salaries of Data Jobs by Schedule
 
-#### 📈 Map Chart - Median Salaries of Countries
+> #### Key Insights & Recommendations
 
-_Justification_
-
-_Map chart image_
-
-#### 🔢 Top Job Platform
-
-```Excel formula syntax
-COUNTIFS(jobs[job_via], A2,
-         jobs[job_title_short], job_title,
-         jobs[job_country], job_country,
-         jobs[job_schedule_type], job_type)
-```
+#### 📈 Bar Chart
 
 _Justification_
 
-#### 🔢 Median Salary of Job Schedules
+_Bar chart image_
+
+#### 🔢 Formula
+
+_Justification_
 
 ```Excel formula syntax
 MEDIAN(
@@ -113,18 +122,27 @@ MEDIAN(
  )
 ```
 
+### Top Platforms & Posting Volume
+
+> #### Key Insights & Recommendations
+
+#### 🔢 Formula: Top Job Platform
+
 _Justification_
-
-#### 📈 Bar Chart - Median Salaries of Job Schedules
-
-_Justification_
-
-_Bar chart image_
-
-#### 🔢 Job Count
 
 ```Excel formula syntax
-=COUNT(
+COUNTIFS(jobs[job_via], A2,
+         jobs[job_title_short], job_title,
+         jobs[job_country], job_country,
+         jobs[job_schedule_type], job_type)
+```
+
+#### 🔢 Formula: Job Count
+
+_Justification_
+
+```Excel formula syntax
+COUNT(
   IF(
      (jobs[job_country]=job_country) *
      (jobs[job_title_short]=A2) *
@@ -134,8 +152,4 @@ _Bar chart image_
  )
 ```
 
-_Justification_
-
-## Key Insights
-
-## Recommendations
+## Conclusion
