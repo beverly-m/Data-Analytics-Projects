@@ -1,6 +1,6 @@
 # Data Jobs Salary Dashboard
 
-![Salary Calculator Dashboard](https://github.com/user-attachments/assets/ddfb79a6-5f5c-4d82-a6b0-516308afa081)
+![Salary Dashoboard-speed](https://github.com/user-attachments/assets/31c673ad-ad6a-46a8-9a4f-f8391aac0ab9)
 
 ## Introduction
 
@@ -8,11 +8,11 @@
 
 Job seekers often face uncertainty when evaluating compensation offers, as salary information can be fragmented, outdated, or inconsistent across sources. Without clear insights into market pay ranges, individuals risk accepting positions with inadequate compensation relative to their skills, experience, and industry standards.
 
-To address this challenge, I developed a job salary dashboard to visualize salary data, enabling job seekers to investigate pay trends for specific roles and make informed decisions about their career opportunities.
+To address this challenge, I developed a job salary dashboard to visualise salary data, enabling job seekers to investigate pay trends for specific roles and make informed decisions about their career opportunities.
 
 ### Objective
 
-To analyze salary trends in data‑related jobs by examining how compensation varies across different geographic locations and employment schedules (e.g., full‑time or part-time). The goal is to provide clear, actionable insights that help job seekers evaluate fair pay.
+To analyse salary trends in data‑related jobs by examining how compensation varies across different geographic locations and employment schedules (e.g., full‑time or part-time). The goal is to provide clear, actionable insights that help job seekers evaluate fair pay.
 
 ### Dashboard File
 
@@ -43,7 +43,7 @@ Filtered dropdown lists used to select the desired `job title`, `job country` an
 - **prevent input errors** by restricting values that can be entered to validated inputs
 - **improve dashboard usability** by providing a quick and simplified selection process
 
-![Filtered Job Title List](https://github.com/user-attachments/assets/0bc3ad38-ab58-41ed-9937-3eaefbc01c02)
+![FilteredList-loop-count](https://github.com/user-attachments/assets/d1e96fd1-6070-4539-a52d-6d57d2c88bfd)
 
 ### Median Salaries of Data Jobs
 
@@ -71,7 +71,7 @@ Horizontal bar charts provide a visual comparison of median salaries across the 
 
 I used a map chart to plot median salaries globally, with a colour-coded design choice that visually differentiates salary levels across regions. This data representation helps users understand geographic salary trends and easily spot high and low-paying regions.
 
-![Map chart](https://github.com/user-attachments/assets/3cc37b7c-2162-41e4-8c32-93b3776fe51f)
+![Map Chart-speed](https://github.com/user-attachments/assets/79b6ba85-b8ef-4770-bc14-10658642bf68)
 
 > 👆🏽 **User Input** - `job_title`: Data Scientist ~ `job_schedule_type`: Full-Time
 > 
@@ -97,7 +97,7 @@ This formula calculates the median salary for a specific `job_title`, `job_count
 
 ### Top Platforms & Posting Volume
 
-![Job Volume and Top Platform](https://github.com/user-attachments/assets/d0592fea-2ef4-411c-801e-b751d230dc07)
+![Job Count-speed](https://github.com/user-attachments/assets/f4f8729a-4ec5-48a6-a517-ea5c9db1e5c5)
 
 #### 🔢 Formula: Job Count by Job Title, Country & Schedule Type
 
