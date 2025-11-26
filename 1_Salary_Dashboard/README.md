@@ -53,7 +53,13 @@ Horizontal bar charts provide a visual comparison of median salaries across the 
 
 _Job title Bar chart image_
 
-> 👆🏽 **User Input** - `job_title`: Data Analyst; `job_country`: United States; `job_schedule_type`: Full-Time
+> 👆🏽 **User Input**
+>
+> `job_title`: Data Analyst
+>
+> `job_country`: United States
+>
+> `job_schedule_type`: Full-Time
 >
 > 💡**Insights** - Data professionals with senior roles have a higher median salary than normal roles. Engineers and scientists earn more than analysts.
 >
