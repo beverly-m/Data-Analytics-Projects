@@ -1,6 +1,6 @@
 # Data Jobs Salary Dashboard
 
-![Salary Dashoboard-speed](https://github.com/user-attachments/assets/31c673ad-ad6a-46a8-9a4f-f8391aac0ab9)
+![Salary Dashboard - speed 2](https://github.com/user-attachments/assets/78e1037d-d82e-4120-bc0d-af9b29cc8733)
 
 ## Introduction
 
@@ -71,7 +71,7 @@ Horizontal bar charts provide a visual comparison of median salaries across the 
 
 I used a map chart to plot median salaries globally, with a colour-coded design choice that visually differentiates salary levels across regions. This data representation helps users understand geographic salary trends and easily spot high and low-paying regions.
 
-![Map Chart-speed](https://github.com/user-attachments/assets/79b6ba85-b8ef-4770-bc14-10658642bf68)
+![Map Chart-speed 2](https://github.com/user-attachments/assets/fd86217c-3a11-425a-91ca-bf2d7c39319b)
 
 > 👆🏽 **User Input** - `job_title`: Data Scientist ~ `job_schedule_type`: Full-Time
 > 
