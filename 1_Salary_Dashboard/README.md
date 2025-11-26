@@ -1,6 +1,6 @@
 # Data Jobs Salary Dashboard
 
-_Screen recording of dashboard_
+![Salary Calculator Dashboard](https://github.com/user-attachments/assets/ddfb79a6-5f5c-4d82-a6b0-516308afa081)
 
 ## Introduction
 
@@ -20,7 +20,7 @@ The final dashboard is [Data_Jobs_Salary_Dashboard.xlsx](https://github.com/beve
 
 ### Dataset
 
-The dataset contains 30,000+ real-world data job postings from 2023. The dataset is available via an [Excel for Data Analytics course by Luke Barousse](https://youtu.be/pCJ15nGFgVg?si=qicwLVMJyS4ycjqH).
+The dataset comprises over 30,000 real-world job postings from 2023. The dataset is available via an [Excel for Data Analytics course by Luke Barousse](https://youtu.be/pCJ15nGFgVg?si=qicwLVMJyS4ycjqH).
 
 It includes detailed information on job titles, salaries, locations, skills and posting platforms.
 
@@ -38,60 +38,44 @@ I used the following Excel skills to build the dashboard
 
 #### ✅ Data Validation - Filtered Lists
 
-Filtered dropdown lists used to select the desired `job title`, `job country` and `job type`
+Filtered dropdown lists used to select the desired `job title`, `job country` and `job type`:
 
 - **prevent input errors** by restricting values that can be entered to validated inputs
 - **improve dashboard usability** by providing a quick and simplified selection process
 
-_Screen recording of lists_
+![Filtered Job Title List](https://github.com/user-attachments/assets/0bc3ad38-ab58-41ed-9937-3eaefbc01c02)
 
 ### Median Salaries of Data Jobs
 
 #### 📈 Horizontal Bar Charts - Job Title & Job Type
 
-Horizontal bar charts provide a visual comparison of median salaries across the different job titles and job types. The data is sorted in ascending order and has formatted salary values to improve readability. The selected job title or job type is higlighted with a darker color for easier identification.
+Horizontal bar charts provide a visual comparison of median salaries across the different job titles and job types. The data is in ascending order and has formatted salary values to improve readability. The selected job title or job type is highlighted with a darker colour for easier identification.
 
-_Job title Bar chart image_
+<img width="400" alt="Bar chart visualising median salary by job title" src="https://github.com/user-attachments/assets/dc329938-4260-45bf-92b2-91e8f2cfc2f9" />
 
-> 👆🏽 **User Input**
->
-> `job_title`: Data Analyst
->
-> `job_country`: United States
->
-> `job_schedule_type`: Full-Time
+> 👆🏽 **User Input** - `job_title`: Data Analyst ~ `country`: United States ~ `job_schedule_type`: Full-Time
 >
 > 💡**Insights** - Data professionals with senior roles have a higher median salary than normal roles. Engineers and scientists earn more than analysts.
 >
-> 🤔 **Recommendations** - Job seekers aiming to maximize earning potential should prioritize advancing into senior roles and consider career paths in engineering or data science rather than analyst positions. Building specialized technical expertise and leadership skills can accelerate progression into these higher‑paying categories.
+> 🤔 **Recommendations** - Job seekers aiming to maximise earning potential should prioritise advancing into senior roles and consider career paths in engineering or data science rather than analyst positions. Building specialised technical expertise and leadership skills can accelerate progression into these higher‑paying categories.
 
-_Job type Bar chart image_
+<img width="400" alt="Bar chart visualising median salary by job schedule type" src="https://github.com/user-attachments/assets/7edbfce3-0339-4b3c-80dd-0c46de379fc5" />
 
-> 👆🏽 **User Input**
+> 👆🏽 **User Input** - `job_title`: Data Engineer ~ `job_country`: United States ~ `job_schedule_type`: Full-Time
 >
-> `job_title`: Data Engineer
->
-> `job_country`: United States
->
-> `job_schedule_type`: Full-Time
->
-> 💡**Insights** - Data engineers earn more in temporary and part-time schedules than in full time and contractor roles, with interns earning the least.
+> 💡**Insights** - Data engineers earn more in temporary and part-time schedules than in full-time and contractor roles, with interns earning the least.
 >
 > 🤔 **Recommendations** - Job seekers pursuing data engineering roles should consider temporary or part‑time opportunities as potential pathways to higher compensation, especially when flexibility aligns with their career goals.
 
 #### 📈 Map Chart - Job Country
 
-I used a map chart to plot median salaries globally, with a color-coded design choice that visually differentiates salary levels across regions. This data representation helps users understand geographic salary trends and easily spot high and low paying regions.
+I used a map chart to plot median salaries globally, with a colour-coded design choice that visually differentiates salary levels across regions. This data representation helps users understand geographic salary trends and easily spot high and low-paying regions.
 
-_Map chart image_
+![Map chart](https://github.com/user-attachments/assets/3cc37b7c-2162-41e4-8c32-93b3776fe51f)
 
-> 👆🏽 **User Input**
->
-> `job_title`: Data Scientist
->
-> `job_schedule_type`: Full-Time
->
-> 💡**Insights** - The map visualization reveals that median salaries for data scientist roles generally range between USD 80k and USD 130k worldwide, with neighboring countries often displaying similar compensation levels. Australasia, North America, and Northern Europe stand out as regions offering comparatively higher salaries, reflecting strong demand and mature data industries. Notably, Russia presents an outlier with a median salary of USD 250k.
+> 👆🏽 **User Input** - `job_title`: Data Scientist ~ `job_schedule_type`: Full-Time
+> 
+> 💡**Insights** - The map visualisation reveals that median salaries for data scientist roles generally range between USD 80k and USD 130k worldwide, with neighbouring countries often displaying similar compensation levels. Australasia, North America, and Northern Europe stand out as regions offering comparatively higher salaries, reflecting strong demand and mature data industries. Notably, Russia presents an outlier with a median salary of USD 250k.
 >
 > 🤔 **Recommendations** - Job seekers in data science should consider targeting opportunities in regions such as Australasia, North America, and Northern Europe, where median salaries are consistently higher. They should also use regional salary benchmarks to negotiate fair compensation, especially when relocating or working remotely. It is important to keep note of outliers - unusually high median salaries - and verify whether such figures reflect sustainable market trends or niche circumstances.
 
@@ -112,6 +96,8 @@ MEDIAN(
 This formula calculates the median salary for a specific `job_title`, `job_country`, and `job_schedule_type` while excluding missing or invalid salary values. Using the median ensures that extreme outliers don’t distort the results, giving job seekers a realistic benchmark for compensation.
 
 ### Top Platforms & Posting Volume
+
+![Job Volume and Top Platform](https://github.com/user-attachments/assets/d0592fea-2ef4-411c-801e-b751d230dc07)
 
 #### 🔢 Formula: Job Count by Job Title, Country & Schedule Type
 
@@ -141,4 +127,4 @@ This formula counts the number of job postings from a specific platform `job_via
 
 ## Conclusion
 
-This analysis highlights how compensation in data roles varies significantly by job title, seniority, schedule, and location. For job seekers, these insights emphasize the importance of considering not only the role itself but also the employment schedule and location when evaluating opportunities. By leveraging this dashboard, individuals can benchmark fair compensation, identify high‑paying regions and roles, and make more informed career decisions that align with both financial goals and professional growth.
+This analysis highlights how compensation in data roles varies significantly by job title, seniority, schedule, and location. For job seekers, these insights emphasise the importance of considering not only the role itself but also the employment schedule and location when evaluating opportunities. By leveraging this dashboard, individuals can benchmark fair compensation, identify high‑paying regions and roles, and make more informed career decisions that align with both financial goals and professional growth.
