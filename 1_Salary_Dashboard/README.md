@@ -26,7 +26,7 @@ It includes detailed information on job titles, salaries, locations, skills and 
 
 ### Tools & Skills
 
-I used the following Excel skills to build the dashboard
+I used the following **Excel** skills to build the dashboard
 
 - ✅ Data Validation
 - 🔢 Formulas & Functions
