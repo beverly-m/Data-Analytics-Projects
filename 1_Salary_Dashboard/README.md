@@ -71,10 +71,10 @@ Horizontal bar charts provide a visual comparison of median salaries across the 
 
 I used a map chart to plot median salaries globally, with a colour-coded design choice that visually differentiates salary levels across regions. This data representation helps users understand geographic salary trends and easily spot high and low-paying regions.
 
-![Map Chart-speed 2](https://github.com/user-attachments/assets/fd86217c-3a11-425a-91ca-bf2d7c39319b)
+![Map chart 1](https://github.com/user-attachments/assets/1eda8d91-e420-42f0-a932-fcd24e66b200)
 
 > 👆🏽 **User Input** - `job_title`: Data Scientist ~ `job_schedule_type`: Full-Time
-> 
+>
 > 💡**Insights** - The map visualisation reveals that median salaries for data scientist roles generally range between USD 80k and USD 130k worldwide, with neighbouring countries often displaying similar compensation levels. Australasia, North America, and Northern Europe stand out as regions offering comparatively higher salaries, reflecting strong demand and mature data industries. Notably, Russia presents an outlier with a median salary of USD 250k.
 >
 > 🤔 **Recommendations** - Job seekers in data science should consider targeting opportunities in regions such as Australasia, North America, and Northern Europe, where median salaries are consistently higher. They should also use regional salary benchmarks to negotiate fair compensation, especially when relocating or working remotely. It is important to keep note of outliers - unusually high median salaries - and verify whether such figures reflect sustainable market trends or niche circumstances.
