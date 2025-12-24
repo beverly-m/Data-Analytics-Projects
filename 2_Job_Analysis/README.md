@@ -74,8 +74,36 @@ I used the following **Excel** skills for analysis:
 ### Analysis: Skills vs Salary
 
 - There is a positive correlation between the number of skills requested per job posting and the median salary earned.
+- Job titles requiring less skills such as business analysts offer a lower average salary than job titles demanding more skills such as data scientists.
+- Although engineering roles demand more skills, their average salary is roughly similar and at times less than science and analytics roles.
+
+#### Conclusion: Skills vs Salary
+
+> 💡 To increase income, data professionals may focus on upskilling to increase their value in the job market. However, they should take into consideration that data scientist roles pay more with less skills required than data engineering roles.
 
 ## 2. What is the median salary for data jobs in different regions?
+
+### Skills: `📊 Pivot Tables` `📈 Pivot Charts` `🧮 DAX`
+
+#### Pivot Table and Pivot Chart
+
+- I created a pivot table and pivot chart using the `data_jobs_salary` query.
+- The rows are the job titles and the columns are the regional, US and Non-US median salary values calculated for each job title.
+- I inserted a **slicer** to allow comparison of salaries for a selected region against US and Non-US median salaries.
+
+#### DAX
+
+I created the following measures to calculate the regional, US and Non-US median salary values.
+
+```DAX
+Median Salary:=MEDIAN(data_jobs_salary[salary_year_avg])
+
+Median Salary US:=CALCULATE([Median Salary],data_jobs_salary[job_country] = "United States")
+
+Median Salary Non-US:=CALCULATE([Median Salary], data_jobs_salary[job_country] <> "United States")
+```
+
+### Analysis: Australia, US and Non-US median salaries
 
 ## 3. What are the top skills of data professionals?
 
