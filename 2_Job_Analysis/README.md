@@ -73,11 +73,13 @@ I used the following **Excel** skills for analysis:
 
 ### Analysis: Skills vs Salary
 
+#### Skills Salary Insights
+
 - There is a positive correlation between the number of skills requested per job posting and the median salary earned.
 - Job titles requiring less skills such as business analysts offer a lower average salary than job titles demanding more skills such as data scientists.
 - Although engineering roles demand more skills, their average salary is roughly similar and at times less than science and analytics roles.
 
-#### Conclusion: Skills vs Salary
+#### Skills Salary Conclusion
 
 > 💡 To increase income, data professionals may focus on upskilling to increase their value in the job market. However, they should take into consideration that data scientist roles pay more with less skills required than data engineering roles.
 
@@ -87,9 +89,11 @@ I used the following **Excel** skills for analysis:
 
 #### Pivot Table and Pivot Chart
 
-- I created a pivot table and pivot chart using the `data_jobs_salary` query.
-- The rows are the job titles and the columns are the regional, US and Non-US median salary values calculated for each job title.
-- I inserted a **slicer** to allow comparison of salaries for a selected region against US and Non-US median salaries.
+1️⃣ I created a pivot table and pivot chart using the `data_jobs_salary` query.
+
+2️⃣ The rows are the job titles and the columns are the regional, US and Non-US median salary values calculated for each job title.
+
+3️⃣ I inserted a **slicer** to allow comparison of salaries for a selected region against US and Non-US median salaries.
 
 #### DAX
 
@@ -103,8 +107,71 @@ Median Salary US:=CALCULATE([Median Salary],data_jobs_salary[job_country] = "Uni
 Median Salary Non-US:=CALCULATE([Median Salary], data_jobs_salary[job_country] <> "United States")
 ```
 
-### Analysis: Australia, US and Non-US median salaries
+### Analysis: Canada, US and Non-US median salaries
+
+#### Median Salaries Insights
+
+- Data job roles in Canada tend to pay within or slightly less than in the US and Non-US countries, excluding cloud engineering roles.
+- Non-US countries have a significantly lower median salaries in cloud, software and machine learning engineering roles than Canada and the US.
+- Job roles in data engineering and data science command higher median salaries globally, with Machine Learning and Cloud Engineering being among the top paying job roles in the US and Canada.
+
+#### Median Salaries Conclusion
+
+> 💡These salary insights reflect the need for data professionals to analyse market trends for planning and salary negotiations. This helps to be better informed on the value of different job roles across regions.
 
 ## 3. What are the top skills of data professionals?
 
+### Skill: `💪 Power Pivot`
+
+1️⃣ I created a data model by integrating the `data_jobs_all` and `data_jobs_skills` tables into one model.
+
+2️⃣ Since I had already cleaned the data using Power Query; I used Power Pivot to create a relationship between these two tables using the `job_id` column.
+
+3️⃣ I also used Power Pivot to refine the data model and create measures to calculate the likelihood of a skill being required.
+
+```DAX
+Skill Count:=COUNT(data_job_skills[job_skill])
+
+Job Count:=DISTINCTCOUNT(data_jobs_salary[job_id])
+
+Skill Likelihood:=DIVIDE([Skill Count], [Job Count])
+```
+
+4️⃣ I inserted slicers to allow comparison of skills for a selected region and job title.
+
+### Analysis: Top skills for all data jobs globally
+
+#### Top Skills Insights
+
+- SQL and Python dominate as top skills in data-related jobs, reflecting their foundational role in data processing and analysis.
+- There is a signficant demand for knowledge in cloud technologies such as AWS and Azure, and big data analytics tools such as Spark.
+
+#### Top Skills Conclusion
+
+Data professionals should invest in building knowledge on SQL and Python as they are highly used in the industry. They may also learn skills in big data analytics and cloud technologies to gain a competitive edge.
+
 ## 4. What is the median salary for the top 10 skills?
+
+### Skills: `📈 Pivot Charts`
+
+1️⃣ I created a combo PivotChart to plot median salary and skill likelihood (%) from a PivotTable.
+
+**Primary Axis:** Median Salary (as a Clustered Column)
+
+**Secondary Axis:** Skill Likelihood (as a Line with Markers)
+
+2️⃣ To customize the chart, I removed the lines (skill likelihood), and changed the markers to diamonds.
+
+3️⃣ I inserted slicers to allow comparison of skills for a selected region and job title.
+
+### Analysis: Median salary of top skills
+
+#### Top Skills Median Salary Insights
+
+- Higher median salaries are associated with skills like Spark, AWS, and Java, suggesting their critical role in high-paying tech jobs. However, their skill likelihood is low, indicating that there are fewer jobs requiring these skills.
+- Big data, cloud and programming skills have higher median salaries, whereas analytics and visualisation tools are at the bottom 10 median salaries.
+- Skills in Python and SQL are both in demand and are required in jobs with relatively high median salary.
+
+#### Top Skills Median Salary Conclusion
+
+> 💡 Data professionals will benefit from investing time in learning high-value skills like Python and SQL, which are evidently tied to higher paying roles, if they are looking to maximize their salary in the tech industry. For more niche, higher paying roles, they may also look into the learning big data technologies like Spark.
