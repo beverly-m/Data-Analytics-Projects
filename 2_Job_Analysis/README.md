@@ -61,7 +61,11 @@ I used the following **Excel** skills for analysis:
 
 `data_jobs_salary`
 
+<img width="300" alt="data_jobs_salary query settings" src="https://github.com/user-attachments/assets/e8bbe7e2-3d65-43d4-878c-ae42acdabd59" />
+
 `data_jobs_skills`
+
+<img width="300" alt="data_jobs_skills query settings" src="https://github.com/user-attachments/assets/93401df5-35fa-4163-9ce2-0af5256b0122" />
 
 #### Load
 
@@ -69,7 +73,12 @@ I used the following **Excel** skills for analysis:
 
 `data_jobs_salary`
 
+<img width="1920" height="1080" alt="data_jobs_salary PowerQuery editor" src="https://github.com/user-attachments/assets/9b3e1988-acb3-4331-8eae-1897d44d545f" />
+
+
 `data_jobs_skills`
+
+<img width="1920" height="1080" alt="data_jobs_skills PowerQuery editor" src="https://github.com/user-attachments/assets/c944ad7e-ee7f-4af7-8671-22673e0d8aea" />
 
 ### Analysis: Skills vs Salary
 
@@ -78,6 +87,8 @@ I used the following **Excel** skills for analysis:
 - There is a positive correlation between the number of skills requested per job posting and the median salary earned.
 - Job titles requiring less skills such as business analysts offer a lower median salary than job titles demanding more skills such as data scientists.
 - Although engineering roles demand more skills, their median salary is roughly similar and at times less than science and analytics roles.
+
+<img width="800" alt="skills vs salary chart" src="https://github.com/user-attachments/assets/b818e667-968e-4e65-946e-fd88312516b0" />
 
 #### Skills Salary Conclusion
 
@@ -113,7 +124,11 @@ Median Salary Non-US:=CALCULATE([Median Salary], data_jobs_salary[job_country] <
 
 - Data job roles in Canada tend to pay within or slightly less than in the US and Non-US regions, excluding cloud engineering roles.
 - Non-US countries have significantly lower median salaries in cloud, software and machine learning engineering roles than Canada and the US.
-- Job roles in data engineering and data science command higher median salaries globally, with machine Learning and cloud Engineering being among the top paying job roles in the US and Canada.
+- Job roles in data engineering and data science command higher median salaries globally, with machine Learning and cloud Engineering being among the top-paying job roles in the US and Canada.
+
+<img width="650" alt="pivot table of median salaries of job titles regions" src="https://github.com/user-attachments/assets/b89a749b-7d09-439e-b829-943a0f7cc6e2" />
+
+<img width="1080" alt="pivot chart and slicer of median salaries of job titles in different regions" src="https://github.com/user-attachments/assets/c6ef0603-976c-4cb1-9949-e5bd23f7b42a" />
 
 #### Median Salaries Conclusion
 
@@ -126,6 +141,8 @@ Median Salary Non-US:=CALCULATE([Median Salary], data_jobs_salary[job_country] <
 1️⃣ I created a data model by integrating the `data_jobs_all` and `data_jobs_skills` tables into one model.
 
 2️⃣ Since I had already cleaned the data using Power Query; I used Power Pivot to create a relationship between these two tables using the `job_id` column.
+
+<img width="400" alt="Power Pivot window diagram view of relationships" src="https://github.com/user-attachments/assets/343675c9-446b-4163-85eb-e8b6f1428126" />
 
 3️⃣ I also used Power Pivot to refine the data model and create measures to calculate the likelihood of a skill being required.
 
@@ -143,6 +160,8 @@ Skill Likelihood:=DIVIDE([Skill Count], [Job Count])
 
 - SQL and Python dominate as top skills in data-related jobs, reflecting their foundational role in data processing and analysis.
 - There is a signficant demand for knowledge in cloud technologies such as AWS and Azure, and big data analytics tools such as Spark.
+
+<img width="800" alt="pivot table of top job skills in data" src="https://github.com/user-attachments/assets/f88c8887-1317-4e52-8fd9-d010531a3fa1" />
 
 #### Top Skills Conclusion
 
@@ -167,6 +186,8 @@ Skill Likelihood:=DIVIDE([Skill Count], [Job Count])
 - Higher median salaries are associated with skills like Spark, AWS, and Java, suggesting their critical role in high-paying tech jobs. However, their skill likelihood is low, indicating that there are fewer jobs requiring these skills.
 - Big data, cloud and programming skills have higher median salaries, whereas analytics and visualisation tools are at the bottom 10 median salaries.
 - Skills in Python and SQL are both in demand and are required in jobs with relatively high median salary.
+
+<img width="800" alt="combo pivot chart of top skills vs median salary" src="https://github.com/user-attachments/assets/d833e090-9b3a-45b6-b252-0239c94fcd52" />
 
 #### Top Skills Median Salary Conclusion
 
