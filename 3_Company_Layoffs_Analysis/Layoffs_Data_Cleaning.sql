@@ -199,4 +199,4 @@ DROP COLUMN row_num;
 
 SELECT * FROM layoffs.layoffs_staging2;
 
-
+SELECT * FROM layoffs.layoffs;
