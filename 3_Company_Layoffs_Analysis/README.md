@@ -2,18 +2,18 @@
 
 ## Contents
 
-- Data Cleaning
-- Exploratory Data Analysis
+- [Data Cleaning](#data-cleaning)
+- [Exploratory Data Analysis](#exploratory-data-analysis)
 
 ## Data Cleaning
 
 > **Before cleaning**
 
-[]()
+![Preview of dataset before cleaning](https://github.com/user-attachments/assets/0eac5e0f-7197-470d-9330-17fa8861a3ac)
 
 > **After cleaning**
 
-[]()
+![Preview of clean dataset](https://github.com/user-attachments/assets/8f87b7b9-74da-4261-b9ad-1f27f5bcbab8)
 
 ### Steps
 
