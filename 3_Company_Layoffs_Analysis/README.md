@@ -1,4 +1,4 @@
-# Company Layoffs Analysis
+# Company Layoffs Data Cleaning & Exploratory Data Analysis
 
 ## Contents
 
