@@ -15,15 +15,15 @@
 
 ![Preview of clean dataset](https://github.com/user-attachments/assets/8f87b7b9-74da-4261-b9ad-1f27f5bcbab8)
 
-### Steps
+### Steps I Took To Clean The Data
 
-1. Create a staging table
-2. Check for and remove duplicates
-3. Standardize data and fix errors
-4. Look at null values
-5. Remove irrelevant columns and rows
+1. [Create a staging table](#1%EF%B8%8F⃣-staging-table)
+2. [Check for and remove duplicates](#2%EF%B8%8F⃣-removing-duplicates)
+3. [Standardise data and fix errors](#3%EF%B8%8F⃣-standardising-data)
+4. [Look at null values](#4%EF%B8%8F⃣-managing-null-values)
+5. [Remove irrelevant columns and rows](#5%EF%B8%8F⃣-removing-irrelevant-data)
 
-### Staging Table
+### 1️⃣ Staging Table
 
 I created a duplicate table `layoffs_staging` to use to clean the data and avoid altering the original dataset.
 
@@ -39,7 +39,7 @@ INSERT INTO `layoffs`.`layoffs_staging` (
 SELECT * FROM layoffs.layoffs;
 ```
 
-### Removing Duplicates
+### 2️⃣ Removing Duplicates
 
 #### Step 1: Using a window function to identify duplicates
 
@@ -57,7 +57,7 @@ FROM (
 WHERE row_num > 1;
 ```
 
-![Company layoff duplicate rows]()
+![Company layoff duplicate rows](https://github.com/user-attachments/assets/fb2c831b-3c83-4ea1-956d-b9e7f6d48ac2)
 
 #### Step 2: Verifying duplicates
 
@@ -70,7 +70,7 @@ WHERE company IN ('Beyond Meat', 'Cars24', 'Cazoo')
 ORDER BY company, `date`;
 ```
 
-![Verifying duplicate values]()
+![Verifying duplicate values](https://github.com/user-attachments/assets/a32ba00f-a8d9-4002-b78c-1de3c2ddbdb4)
 
 #### Step 3: Deleting duplicates
 
@@ -91,7 +91,7 @@ FROM layoffs.layoffs_staging2
 WHERE row_num > 1;
 ```
 
-### Standardising Data
+### 3️⃣ Standardising Data
 
 #### Step 1: Removing Whitespace
 
@@ -147,7 +147,7 @@ SET country = 'United Arab Emirates'
 WHERE country = 'UAE';
 ```
 
-### Managing Null Values
+### 4️⃣ Managing Null Values
 
 #### Step 1: Blank `stage` Column values
 
@@ -174,7 +174,7 @@ FROM layoffs.layoffs_staging2
 WHERE country = '';
 ```
 
-![Record with blank country value]()
+![Record with blank country value](https://github.com/user-attachments/assets/c734306d-5695-49a0-8edb-86694dfa3d89)
 
 ```sql
 -- view layoffs in the same location
@@ -183,7 +183,7 @@ FROM layoffs.layoffs_staging2
 WHERE location = 'Montreal';
 ```
 
-![data of layoffs in the same location]()
+![data of layoffs in the same location](https://github.com/user-attachments/assets/017a9907-e2fc-4d0b-a75b-bb9bc6e354ae)
 
 ```sql
 -- set blank country value to 'Canada' because the location 'Montreal' is in Canada
@@ -192,7 +192,7 @@ SET country = 'Canada'
 WHERE country = '' AND location = 'Montreal';
 ```
 
-### Removing Irrelevant Data
+### 5️⃣ Removing Irrelevant Data
 
 I deleted the row number column `row_num` that was used to remove duplicates.
 
