@@ -1,11 +1,4 @@
-# Company Layoffs Data Cleaning & Exploratory Data Analysis
-
-## Contents
-
-- [Data Cleaning](#data-cleaning)
-- [Exploratory Data Analysis](#exploratory-data-analysis)
-
-## Data Cleaning
+# Company Layoffs Data Cleaning
 
 > **Before cleaning**
 
@@ -200,5 +193,3 @@ I deleted the row number column `row_num` that was used to remove duplicates.
 ALTER TABLE layoffs.layoffs_staging2
 DROP COLUMN row_num;
 ```
-
-## Exploratory Data Analysis
