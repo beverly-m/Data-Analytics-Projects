@@ -156,6 +156,38 @@ UPDATE layoffs.layoffs_staging2
 SET country = 'United Arab Emirates'
 WHERE country = 'UAE';
 
+-- 9. percentage_laid_off and funds_raised_million column
+SELECT DISTINCT percentage_laid_off
+FROM layoffs.layoffs_staging2;
+
+UPDATE layoffs.layoffs_staging2
+SET percentage_laid_off = NULL
+WHERE percentage_laid_off = '';
+
+SELECT DISTINCT percentage_laid_off, CONVERT(percentage_laid_off, DECIMAL(5,4)) AS decimal_value
+FROM layoffs.layoffs_staging2;
+
+UPDATE layoffs.layoffs_staging2
+SET percentage_laid_off = CONVERT(percentage_laid_off, DECIMAL(5,4));
+
+SELECT DISTINCT funds_raised_million
+FROM layoffs.layoffs_staging2
+ORDER BY funds_raised_million;
+
+UPDATE layoffs.layoffs_staging2
+SET funds_raised_million = NULL
+WHERE funds_raised_million = '';
+
+SELECT DISTINCT funds_raised_million, CONVERT(funds_raised_million, DECIMAL(12,5)) AS decimal_value
+FROM layoffs.layoffs_staging2;
+
+UPDATE layoffs.layoffs_staging2
+SET funds_raised_million = CONVERT(funds_raised_million, DECIMAL(12,5));
+
+ALTER TABLE layoffs.layoffs_staging2
+MODIFY COLUMN percentage_laid_off DECIMAL(5,4),
+MODIFY COLUMN funds_raised_million DECIMAL(12,5);
+
 -- ******************************
 -- Step 3: Look at null values
 -- ******************************
